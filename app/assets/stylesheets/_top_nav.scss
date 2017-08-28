@@ -1,0 +1,77 @@
+@import "variables";
+
+//
+// Navbar
+//
+.nav-wrapper {
+  background-color: lighten($gray-900, 15%);
+  padding-left: 1.0em;
+  padding-right: 1.0em;
+  padding-bottom: 1.0em;
+  a {
+    color: $gray-100 !important;
+    text-decoration: none;
+    &:hover {
+      color: inherit;
+    }
+    svg {
+      margin-top: 0.25em;
+      height: 70%;
+    }
+  }
+  .side-nav {
+    width: 225px !important;
+    background-color: $gray-900 !important;
+    li {
+      border-bottom: 1px solid rgba($gray-100, 0.3) !important;
+      a {
+        color: $gray-100 !important;
+      }
+    }
+  }
+  li {
+    &:hover {
+      background-color: lighten($gray-900, 20%);
+    }
+  }
+  .brand-logo {
+    margin-left: 1rem;
+  }
+}
+
+#sidenav-overlay {
+  z-index: 500 !important;
+}
+
+footer.page-footer {
+  background-color: transparent;
+  .footer-copyright {
+    background-color: rgba(lighten($gray-900, 15%), 0.75);
+    .row {
+      margin-bottom: 0;
+      padding: 1em 2em;
+      width: 100%;
+      a.hover-orange {
+        transition: color 0.2s ease;
+        &:hover {
+          color: $yellow-700 !important;
+        }
+      }
+      .references {
+        strong {
+          font-size: 0.9em;
+        }
+        span {
+          font-size: 0.85em;
+          font-style: italic;
+        }
+      }
+      .right {
+        //text-align: center;
+      }
+    }
+  }
+  .container {
+    margin: 1em;
+  }
+}

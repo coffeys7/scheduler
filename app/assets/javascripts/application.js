@@ -10,6 +10,52 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
+//= require jquery
 //= require turbolinks
 //= require_tree .
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Document [turbolinks:load]
+//
+////////////////////////////////////////////////////////////////////////////////
+
+//
+// HTML Helper
+//
+var HTMLHelper = new HtmlHelper();
+
+
+
+/**
+ * Document on [turbolinks:load]
+ */
+$(document).on('turbolinks:load', function() {
+
+    //
+    // Modals
+    //
+    $('.modal').modal();
+
+    //
+    // Collapsibles
+    //
+    $('.collapsible').collapsible();
+
+    //
+    // Dropdowns
+    //
+    $('.dropdown-button').dropdown({
+        hover: true,
+        belowOrigin: true,
+        inDuration: 400,
+        outDuration: 200
+    });
+
+    //
+    // Authenticity Tokens
+    //
+    //$('input[name="authenticity_token"].fill').val($('#CSRF_TOK').val());
+
+});

@@ -1,0 +1,15 @@
+<div class="center-block">
+  <p class="title">Password Reset</p>
+  <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post, class: 'password_reset' }) do |f| %>
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Send me reset password instructions", class: 'btn small' %>
+      </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+</div>

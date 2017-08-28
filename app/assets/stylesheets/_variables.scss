@@ -1,0 +1,162 @@
+//
+// Google Fonts
+//
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+//
+// Gradient Mixins
+//
+@mixin make-gradient($color1, $color2) {
+  /* IE10+ */
+  background-image: -ms-linear-gradient(top, $color1 0%, $color2 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(top, $color1 0%, $color2 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(top, $color1 0%, $color2 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $color1), color-stop(100, $color2));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(top, $color1 0%, $color2 100%);
+  /* W3C Markup */
+  background-image: linear-gradient(to bottom, $color1 0%, $color2 100%);
+}
+
+@mixin gradient-texture-1 {
+  background-image: -moz-linear-gradient(0deg, #202125, #202125 2px, #292a2e 2px, #292a2e 4px, #202125 4px);background-image: -webkit-linear-gradient(0deg, #202125, #202125 2px, #292a2e 2px, #292a2e 4px, #202125 4px);background-repeat: repeat;background-size: 5px 10px;height:50px;
+}
+
+@mixin gradient-texture-2 {
+  background:-moz-repeating-linear-gradient(top, #565656, #131313 2px, #565656 1px);
+  background: -o-repeating-linear-gradient(top, #565656, #131313 2px, #565656 1px);
+  background: -webkit-repeating-linear-gradient(top, #565656, #131313 2px, #565656 1px);
+  background: repeating-linear-gradient(top, #565656, #131313 2px, #565656 1px);
+}
+
+//
+// Fonts
+//
+$font-ubuntu: 'Ubuntu', sans-serif;
+$font-awesome: 'FontAwesome';
+
+//
+// Colors
+//
+
+// red
+$red-500: #e74c3c;
+$red-700: #c0392b;
+
+// dark blue
+$dark-blue-700: #2c3e50;
+$dark-blue-500: #34495e;
+
+// blue
+$blue-500: #3498db;
+$blue-700: #2980b9;
+
+// green
+$green-500: #2ecc71;
+$green-700: #27ae60;
+
+// turqoise
+$turqoise-500: #1abc9c;
+$turqoise-700: #16a085;
+
+// gray
+$gray-100: #ecf0f1;
+$gray-300: #bdc3c7;
+$gray-500: #95a5a6;
+$gray-700: #7f8c8d;
+$gray-900: lighten(#222222, 5%);
+
+// yellow
+$yellow-500: #f1c40f;
+$yellow-700: #f39c12;
+
+// orange
+$orange-500: #e67e22;
+$orange-700: #d35400;
+
+//
+// Unicode Characters (FontAwesome)
+//
+$unicode-dollar-sign: '\f155';
+$unicode-percent-sign: '\f295';
+$unicode-check-circle: '\f058';
+$unicode-times-circle: '\f057';
+
+@mixin make-gradient($color1, $color2) {
+  /* IE10+ */
+  background-image: -ms-linear-gradient(top, $color1 0%, $color2 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(top, $color1 0%, $color2 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(top, $color1 0%, $color2 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $color1), color-stop(100, $color2));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(top, $color1 0%, $color2 100%);
+  /* W3C Markup */
+  background-image: linear-gradient(to bottom, $color1 0%, $color2 100%);
+}
+
+//
+// Custom Scrollbar
+//
+@mixin set-custom-scrollbar($color, $width) {
+  &::-webkit-scrollbar-track
+  {
+    border-radius: 10px !important;
+    background-color: transparent !important;
+  }
+
+  &::-webkit-scrollbar
+  {
+    width: $width !important;
+    background-color:transparent !important;
+  }
+
+  &::-webkit-scrollbar-thumb
+  {
+    background-color: $color !important;
+  }
+}
+
+@mixin triangle($size, $color, $location) {
+  &:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+
+    // left pointing arrow
+    @if $location == 'left' {
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent;
+      border-right: $size solid $color;
+      left: -$size;
+    }
+      // right pointing arrow
+    @else if $location == 'right' {
+      border-top: $size solid transparent;
+      border-bottom: $size solid transparent;
+      border-left: $size solid $color;
+      right: -$size;
+    }
+      // up pointing arrow
+    @else if $location == 'top' {
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-bottom: $size solid $color;
+      top: -$size;
+    }
+      // down pointing arrow
+    @else if $location == 'bottom' {
+      border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-top: $size solid $color;
+      bottom: -$size;
+    }
+  }
+}

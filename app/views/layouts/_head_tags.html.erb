@@ -1,0 +1,22 @@
+<!-- Title -->
+<title>Scheduler</title>
+
+<!-- CSRF -->
+<%= csrf_meta_tags %>
+
+<!-- Turbolinks -->
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+<!-- Devise Sizing for mobile -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- JavaScript -->
+<% head_libs[:javascripts].each do |_, src| %>
+    <script src="<%= src %>"></script>
+<% end %>
+
+<!-- Stylesheets -->
+<% head_libs[:stylesheets].each do |_, href| %>
+    <link rel="stylesheet" href="<%= href %>">
+<% end %>

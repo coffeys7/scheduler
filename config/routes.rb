@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  # Devise
+  devise_for :users
+  devise_scope :user do
+    get '/users/logout' => 'devise/sessions#destroy'
+  end
+
+  # Generic
+  root 'application#home'
+
 end

@@ -1,14 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Scheduler</title>
-    <%= csrf_meta_tags %>
+<head>
+  <%= render 'layouts/head_tags' %>
+</head>
+<body>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<header>
+  <!-- Top Nav -->
+  <%= render 'layouts/top_nav' %>
+</header>
 
-  <body>
-    <%= yield %>
-  </body>
+<main>
+  <!-- Devise Flash Messages [ notice ] -->
+  <% if notice %>
+      <script>
+        HTMLHelper.toast({ type: 'success', text: '<%= notice %>', duration: 3000 });
+      </script>
+  <% end %>
+
+  <!-- Devise Flash Messages [ alert ] -->
+  <% if alert %>
+      <% alert_title = (alert == 'need_signin') ? 'Please sign in to continue' : alert %>
+      <% alert_type = (alert == 'need_signin') ? 'warning' : 'alert' %>
+      <script>
+        HTMLHelper.toast({ type: '<%= alert_type %>', text: '<%= alert_title %>', duration: 5000 });
+      </script>
+  <% end %>
+
+  <!-- Rendered Page Content -->
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token, :id => "CSRF_TOK" %>
+  <%= yield %>
+</main>
+
+<% if user_signed_in? || request.path_info.include?('/calculators/view') %>
+    <footer class="page-footer">
+      <!-- Footer -->
+      <%= render 'layouts/footer' %>
+    </footer>
+<% end %>
+
+</body>
 </html>

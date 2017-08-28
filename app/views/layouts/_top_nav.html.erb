@@ -1,0 +1,49 @@
+<!-- Account Dropdown -->
+<ul id="account-dropdown" class="dropdown-content dark">
+  <li>
+    <%= link_to '/users/logout' do %>
+        <i class="fa fa-sign-out"></i>Sign out
+    <% end %>
+  </li>
+  <li>
+    <a href="#">
+      <i class="fa fa-circle"></i>
+      &nbsp;Item
+    </a>
+  </li>
+  <li>
+    <a href="#">
+      <i class="fa fa-circle"></i>
+      &nbsp;Item
+    </a>
+  </li>
+</ul>
+
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">
+      Scheduler
+    </a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <% if user_signed_in? %>
+          <li>
+            <a href="#">
+              <i class="fa fa-circle"></i>
+              &nbsp;Item
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fa-circle"></i>
+              &nbsp;Item
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-button" href="#" data-activates="account-dropdown">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
