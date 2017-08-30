@@ -15,7 +15,7 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 
 # Mustache
-gem 'mustache', '~> 1.0'
+gem 'mustache-js-rails'
 
 # Uglifier (JavaScript Compressor)
 gem 'uglifier', '>= 1.3.0'
