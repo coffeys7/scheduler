@@ -10,7 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+//= require mustache
+//= require jquery.mustache
 //= require turbolinks
 //= require_tree .
 

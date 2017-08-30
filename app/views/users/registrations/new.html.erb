@@ -1,9 +1,20 @@
 <div class="center-block">
   <p class="title">Sign Up</p>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), :html => { :class => 'signup_form' }) do |f| %>
+
+      <div class="field">
+        <%= f.label :fname %><br />
+        <%= f.text_field :fname, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :lname %><br />
+        <%= f.text_field :lname %>
+      </div>
+
       <div class="field">
         <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %>
+        <%= f.email_field :email %>
       </div>
 
       <div class="field">
