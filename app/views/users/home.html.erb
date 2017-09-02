@@ -1,3 +1,23 @@
 <div class="center-block">
-  <h6 style="text-align:center; color:white;">Welcome <strong><%= @user.fname %></strong></h6>
+  <table class="calendar-table" style="width:90%;height:90%;">
+    <thead>
+    <tr>
+      <th>Sunday</th>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <!--% Date.new(2017,8,1).upto(Date.new(2017,8,30)).map { |d| d }.each do |day| %-->
+        <!--% if day. %-->
+        <!--<td><!--%= day %--><!--/td-->
+      <!--% end %-->
+    </tr>
+    </tbody>
+  </table>
 </div>
