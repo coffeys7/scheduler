@@ -26,6 +26,9 @@ gem 'pg'
 # Devise (Authentication)
 gem 'devise'
 
+# Simple Calendar
+gem 'simple_calendar', '~> 2.0'
+
 # Figaro (Rails App {ENV} Configuration)
 gem 'figaro'
 
