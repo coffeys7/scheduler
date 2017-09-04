@@ -1,23 +1,27 @@
 <div class="center-block">
-  <table class="calendar-table" style="width:90%;height:90%;">
-    <thead>
-    <tr>
-      <th>Sunday</th>
-      <th>Monday</th>
-      <th>Tuesday</th>
-      <th>Wednesday</th>
-      <th>Thursday</th>
-      <th>Friday</th>
-      <th>Saturday</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <!--% Date.new(2017,8,1).upto(Date.new(2017,8,30)).map { |d| d }.each do |day| %-->
-        <!--% if day. %-->
-        <!--<td><!--%= day %--><!--/td-->
-      <!--% end %-->
-    </tr>
-    </tbody>
-  </table>
+  <!--<table class="calendar-table" style="width:90%;height:90%;">-->
+    <!--<thead>-->
+    <!--<tr>-->
+      <!--<th>Sunday</th>-->
+      <!--<th>Monday</th>-->
+      <!--<th>Tuesday</th>-->
+      <!--<th>Wednesday</th>-->
+      <!--<th>Thursday</th>-->
+      <!--<th>Friday</th>-->
+      <!--<th>Saturday</th>-->
+    <!--</tr>-->
+    <!--</thead>-->
+    <!--<tbody>-->
+    <!--<tr>-->
+      <!--&lt;!&ndash;% Date.new(2017,8,1).upto(Date.new(2017,8,30)).map { |d| d }.each do |day| %&ndash;&gt;-->
+        <!--&lt;!&ndash;% if day. %&ndash;&gt;-->
+        <!--&lt;!&ndash;<td>&lt;!&ndash;%= day %&ndash;&gt;&lt;!&ndash;/td&ndash;&gt;-->
+      <!--&lt;!&ndash;% end %&ndash;&gt;-->
+    <!--</tr>-->
+    <!--</tbody>-->
+  <!--</table>-->
+  <%= month_calendar do |date| %>
+    <%= date.day %>
+  <% end %>
+
 </div>

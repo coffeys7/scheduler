@@ -30,7 +30,9 @@
     }
   }
   li {
+    border-bottom: 2px solid transparent;
     &:hover {
+      border-bottom: 2px solid $blue-500;
       background-color: lighten($gray-900, 20%);
     }
   }
