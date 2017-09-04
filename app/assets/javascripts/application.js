@@ -10,8 +10,8 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require mustache
-//= require jquery.mustache
+//= require jquery
+//= require materialize-sprockets
 //= require turbolinks
 //= require_tree .
 
@@ -57,6 +57,38 @@ $(document).on('turbolinks:load', function() {
     //
     // Authenticity Tokens
     //
-    //$('input[name="authenticity_token"].fill').val($('#CSRF_TOK').val());
+    $('input[name="authenticity_token"].fill').val($('#CSRF_TOK').val());
+
+    //
+    // Timepicker
+    //
+    $('.timepicker').pickatime({
+        default: 'now',
+        fromnow: 0,
+        twelvehour: true,
+        donetext: 'OK',
+        cleartext: 'Clear',
+        canceltext: 'Cancel',
+        autoclose: false,
+        ampmclickable: true,
+        aftershow: function(){}
+    });
+
+    //
+    // Datepicker
+    //
+    $('.datepicker').pickadate({
+        selectMonths: true,
+        selectYears: 15,
+        today: 'Today',
+        clear: 'Clear',
+        close: 'Ok',
+        closeOnSelect: false
+    });
+
+    //
+    // Select fields
+    //
+    $('select').material_select();
 
 });

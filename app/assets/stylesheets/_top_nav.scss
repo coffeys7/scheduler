@@ -30,14 +30,16 @@
     }
   }
   li {
-    border-bottom: 2px solid transparent;
+    border-bottom: 3px solid transparent;
+    transition: border 0.25s ease;
     &:hover {
-      border-bottom: 2px solid $blue-500;
       background-color: lighten($gray-900, 20%);
+      border-bottom: 3px solid $blue-500;
     }
   }
   .brand-logo {
     margin-left: 1rem;
+    font-size: 1.25em;
   }
 }
 

@@ -1,0 +1,46 @@
+<div class="center-block white">
+  <div class="row">
+    <form class="col s12" action="<%= "/activities/update/#{ @activity.id }" %>" id="edit-activity-form" method="post">
+      <input type="hidden" name="activity[user_id]" value="<%= current_user.id %>">
+      <input type="hidden" name="authenticity_token" class="fill">
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="Title" id="title" type="text" name="activity[title]" value="<%= @activity.title %>">
+          <label for="title">Title</label>
+        </div>
+        <div class="input-field col s12">
+          <input type="text" id="date" class="datepicker" name="activity[date]" value="<%= @activity.date.strftime("%e %B, %Y") rescue '' %>">
+          <label for="date">Date</label>
+        </div>
+        <div class="input-field col m6 s12">
+          <input id="start_time" type="text" class="timepicker" name="activity[start_time]" value="<%= @activity.start_time.strftime("%h:%M%p") rescue '' %>">
+          <label for="start_time">Begin</label>
+        </div>
+        <div class="input-field col m6 s12">
+          <input id="end_time" type="text" class="timepicker" name="activity[end_time]" value="<%= @activity.end_time.strftime("%h:%M%p") rescue '' %>">
+          <label for="end_time">End</label>
+        </div>
+        <div class="input-field col s12">
+          <select name="activity[activity_type]">
+            <% Activity.activity_types.keys.each do |k| %>
+                <% selected = (@activity.activity_type == k) ? 'selected' : '' %>
+                <option value="<%= k %>" <%= selected %>><%= k.capitalize %></option>
+            <% end %>
+          </select>
+          <label>Type:</label>
+        </div>
+        <div class="input-field col s12">
+          <textarea id="notes" class="materialize-textarea" name="activity[notes]"><%= @activity.notes %></textarea>
+          <label for="notes">Notes</label>
+        </div>
+        <br>
+        <div class="col m6 s12">
+          <a class="btn grey modal-close" href="/">Back</a>
+        </div>
+        <div class="col m6 s12">
+          <button class="btn blue" type="submit" name="save">Save</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

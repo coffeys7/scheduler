@@ -160,3 +160,10 @@ $unicode-times-circle: '\f057';
     }
   }
 }
+
+@mixin bg($color) {
+  background-color: $color;
+  &:hover {
+    background-color: lighten($color, 5%);
+  }
+}

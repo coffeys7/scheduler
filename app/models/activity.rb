@@ -1,6 +1,6 @@
 class Activity < ApplicationRecord
   belongs_to :user
 
-  enum type: [:assignment, :event, :exam, :quiz, :work, :birthday, :holiday, :generic]
+  enum activity_type: [:assignment, :event, :exam, :quiz, :work, :birthday, :holiday, :generic, :class]
 
 end
