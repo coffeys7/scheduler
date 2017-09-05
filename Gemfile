@@ -38,8 +38,6 @@ gem 'figaro'
 # jQuery/jQueryUI (JavaScript DOM Framework)
 gem 'jquery-rails'
 
-gem 'jquery-turbolinks'
-
 # Font Awesome (Icons)
 gem 'font-awesome-sass', '~> 4.7.0'
 
