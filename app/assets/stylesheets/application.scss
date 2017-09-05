@@ -347,15 +347,14 @@ div.simple-calendar {
                 &::after {
                   content: '\f105';
                   font-family: $font-awesome;
-                  margin-right: 2em;
                   opacity: 0;
-                  transition: opacity 0.2s, margin 0.2s;
+                  transition: opacity 0.075s;
                   float: right;
+                  margin-right: 0.5em;
                 }
                 &:hover {
                   &::after {
                     opacity: 1.0;
-                    margin-right: 0.5em;
                   }
                 }
                 &.class {
