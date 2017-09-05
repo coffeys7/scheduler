@@ -1,7 +1,5 @@
-<div class="center-block">
-  <%= week_calendar do |date| %>
-      <%= date.day %>
-  <% end %>
+<div class="center-block" id="calendar_container">
+  <%= render 'calendars/month_calendar' %>
 </div>
 
 <!-- New Activity Modal -->
@@ -18,3 +16,14 @@
     <i class="material-icons">add</i>
   </a>
 </div>
+
+<script>
+  $('td.day').click(function() {
+    var day = numeral($(this).text()).value();
+    console.log('Day ' + day + ' clicked');
+//    $('#new-activity-modal').modal().find('#new-activity-form')
+//        .find('[name="activity[date]"]')
+//        .val()
+  });
+
+</script>

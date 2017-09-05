@@ -4,14 +4,10 @@ class HomeController < ApplicationController
 
   end
 
-  def month
-    @user = current_user
-    render 'users/month_calendar'
-  end
-
-  def week
-    @user = current_user
-    render 'users/week_calendar'
+  def calendar
+    # respond_to do |format|
+    #   format.js
+    # end
   end
 
 end

@@ -167,3 +167,21 @@ $unicode-times-circle: '\f057';
     background-color: lighten($color, 5%);
   }
 }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin create-animation($anim-name) {
+  animation: $anim-name;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}

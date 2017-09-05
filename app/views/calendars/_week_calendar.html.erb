@@ -1,0 +1,12 @@
+<%= week_calendar do |date| %>
+    <%= date.day %>
+<% end %>
+
+<script>
+  //
+  // Calendar toggle
+  //
+  $('.calendar-toggle').click(function() {
+     $('#calendar_container').html('<div class="loader"><i class="fa fa-circle-o-notch"></i></div>');
+  });
+</script>
