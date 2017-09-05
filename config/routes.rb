@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   get     '/activities/:id'           => 'activities#edit'
   post    '/activities/create'        => 'activities#create'
   post    '/activities/update/:id'    => 'activities#update'
-  delete  '/activities/destroy/:id'   => 'activities#destroy'
+  get     '/activities/destroy/:id'   => 'activities#destroy'
 
   #
   # Users

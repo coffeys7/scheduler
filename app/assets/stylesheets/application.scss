@@ -48,7 +48,6 @@ body {
 a.btn-flat {
   &.delete {
     color: $gray-700 !important;
-    float: right;
     opacity: 0.5;
     transition: opacity 0.9s ease;
     &:hover {
@@ -329,7 +328,8 @@ div.simple-calendar {
             background-color: rgba($gray-900, 0.05);
           }
           &.today {
-            background-color: rgba($blue-500, 0.1);
+            background-color: transparent;
+            border: 2px solid rgba($blue-700, 0.35);
           }
           ul.activities {
             margin: 0;
@@ -356,6 +356,10 @@ div.simple-calendar {
                   &::after {
                     opacity: 1.0;
                   }
+                }
+                &.completed {
+                  text-decoration: line-through;
+                  opacity: 0.5;
                 }
                 &.class {
                   @include bg($turqoise-500);

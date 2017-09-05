@@ -7,7 +7,7 @@ class ActivitiesController < ApplicationController
   def create
     @activity = Activity.new(activity_params)
     if @activity.save
-      redirect_to '/'
+      redirect_to root_path
     else
       redirect_back fallback_location: root_path
     end
@@ -15,14 +15,16 @@ class ActivitiesController < ApplicationController
 
   def update
     @activity = Activity.find(params[:id])
+    complete = params[:activity][:complete]
+    params[:activity][:complete] = (complete && complete == 'on') ? true : false
     @activity.update_attributes(activity_params)
-    redirect_back fallback_location: root_path
+    redirect_to root_path
   end
 
   def destroy
     @activity = Activity.find(params[:id])
     @activity.destroy
-    redirect_back fallback_location: root_path
+    redirect_to root_path
   end
 
   private
