@@ -1,14 +1,3 @@
 <%= week_calendar do |date| %>
     <%= date.day %>
 <% end %>
-
-<script>
-  //
-  // Calendar toggle
-  //
-  prepareComponents();
-  $('.calendar-toggle').click(function() {
-    $('.calendar-heading').html('<div class="loader"><i class="fa fa-circle-o-notch"></i></div>');
-    prepareComponents();
-  });
-</script>

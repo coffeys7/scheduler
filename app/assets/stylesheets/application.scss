@@ -330,8 +330,7 @@ div.simple-calendar {
             background-color: rgba($gray-900, 0.05);
           }
           &.today {
-            background-color: transparent;
-            border: 2px solid rgba($blue-700, 0.35);
+            background-color: rgba($yellow-700, 0.1);
           }
           ul.activities {
             margin: 0;

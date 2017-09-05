@@ -17,7 +17,7 @@
     <thead>
       <tr>
         <% date_range.slice(0, 7).each do |day| %>
-          <th><%= t('date.abbr_day_names')[day.wday] %></th>
+          <th><%= t('date.day_names')[day.wday] %></th>
         <% end %>
       </tr>
     </thead>
@@ -51,3 +51,14 @@
     </tbody>
   </table>
 </div>
+
+<script>
+  $(document).on('turbolinks:load', function() {
+    //
+    // Calendar toggle
+    //
+    $('.calendar-toggle').click(function() {
+      $('.calendar-heading').html('<div class="loader"><i class="fa fa-circle-o-notch"></i></div>');
+    });
+  });
+</script>
