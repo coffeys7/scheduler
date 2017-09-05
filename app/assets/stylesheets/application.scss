@@ -322,10 +322,12 @@ div.simple-calendar {
     }
     tbody {
       tr {
-        // classes => [day, wday-N, past, prev-month, current-month, next-month, today, future, start-date]
+        min-height: 150px !important;
         td {
           font-size: 0.8em;
           font-weight: bold;
+          min-width: 150px !important;
+          height: 150px !important;
           &.prev-month, &.next-month {
             background-color: rgba($gray-900, 0.05);
           }
