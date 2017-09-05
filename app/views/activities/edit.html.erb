@@ -13,11 +13,11 @@
           <label for="date">Date</label>
         </div>
         <div class="input-field col m6 s12">
-          <input id="start_time" type="text" class="timepicker" name="activity[start_time]" value="<%= @activity.start_time.strftime("%h:%M%p") rescue '' %>">
+          <input id="start_time" type="text" class="timepicker" name="activity[start_time]" value="<%= @activity.start_time.strftime("%I:%M %p") rescue '' %>">
           <label for="start_time">Begin</label>
         </div>
         <div class="input-field col m6 s12">
-          <input id="end_time" type="text" class="timepicker" name="activity[end_time]" value="<%= @activity.end_time.strftime("%h:%M%p") rescue '' %>">
+          <input id="end_time" type="text" class="timepicker" name="activity[end_time]" value="<%= @activity.end_time.strftime("%I:%M %p") rescue '' %>">
           <label for="end_time">End</label>
         </div>
         <div class="input-field col s12">
@@ -30,7 +30,7 @@
           <label>Type:</label>
         </div>
         <div class="input-field col s12">
-          <textarea id="notes" class="materialize-textarea" name="activity[notes]"><%= @activity.notes %></textarea>
+          <textarea id="notes" class="materialize-textarea" name="activity[notes]" style="overflow:auto;"><%= @activity.notes %></textarea>
           <label for="notes">Notes</label>
         </div>
         <br>

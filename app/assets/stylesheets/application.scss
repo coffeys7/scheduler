@@ -339,6 +339,25 @@ div.simple-calendar {
               margin-bottom: 0.25em;
               a {
                 width: 100%;
+                height: 100%;
+                color: $gray-100;
+                transition: background 0.2s ease;
+                font-size: 0.8em;
+                padding-left: 0.5em;
+                &::after {
+                  content: '\f105';
+                  font-family: $font-awesome;
+                  margin-right: 2em;
+                  opacity: 0;
+                  transition: opacity 0.2s, margin 0.2s;
+                  float: right;
+                }
+                &:hover {
+                  &::after {
+                    opacity: 1.0;
+                    margin-right: 0.5em;
+                  }
+                }
                 &.class {
                   @include bg($turqoise-500);
                 }
@@ -364,25 +383,10 @@ div.simple-calendar {
                 &.event {
                   @include bg($green-500);
                 }
-                &::after {
-                  content: '\f105';
-                  font-family: $font-awesome;
-                  margin-right: 2em;
-                  opacity: 0;
-                  transition: opacity 0.2s, margin 0.2s;
-                  float: right;
+                .time-range {
+                  font-size: 0.9em;
+                  font-weight: lighter;
                 }
-                &:hover {
-                  &::after {
-                    opacity: 1.0;
-                    margin-right: 0.5em;
-                  }
-                }
-                height: 100%;
-                color: $gray-100;
-                transition: background 0.2s ease;
-                font-size: 0.8em;
-                padding-left: 0.5em;
               }
             }
           }

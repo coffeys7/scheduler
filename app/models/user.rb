@@ -6,7 +6,7 @@ class User < ApplicationRecord
   has_many :activities
 
   def activities_for_day(day)
-    self.activities.where(:date => day)
+    self.activities.where(:date => day.beginning_of_day).order('start_time')
   end
 
 end
