@@ -316,6 +316,7 @@ div.simple-calendar {
         background-color: $gray-700;
         th {
           color: $gray-100;
+          font-size: 0.8em;
         }
       }
     }
@@ -323,6 +324,7 @@ div.simple-calendar {
       tr {
         // classes => [day, wday-N, past, prev-month, current-month, next-month, today, future, start-date]
         td {
+          font-size: 0.8em;
           font-weight: bold;
           &.prev-month, &.next-month {
             background-color: rgba($gray-900, 0.05);
@@ -342,7 +344,7 @@ div.simple-calendar {
                 height: 100%;
                 color: $gray-100;
                 transition: background 0.2s ease;
-                font-size: 0.8em;
+                //font-size: 0.8em;
                 padding-left: 0.5em;
                 &::after {
                   content: '\f105';
