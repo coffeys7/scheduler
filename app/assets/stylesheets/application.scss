@@ -66,6 +66,9 @@ a.btn-flat {
 // Materialize Modal Override Styles
 //
 .modal {
+  &.bottom-sheet {
+    max-height: 90% !important;
+  }
   .modal-close {
     float: right;
     i {

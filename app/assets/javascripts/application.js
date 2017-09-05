@@ -10,9 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require turbolinks
 //= require jquery
 //= require materialize-sprockets
-//= require turbolinks
 //= require_tree .
 
 
@@ -90,6 +90,9 @@ function prepareComponents() {
  * Document on [turbolinks:load]
  */
 $(document).on('turbolinks:load', function() {
+    console.log("Turbolinks loaded");
+    prepareComponents();
+}).on('page:change', function() {
     prepareComponents();
 }).ready(function() {
     prepareComponents();
