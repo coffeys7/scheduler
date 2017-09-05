@@ -39,7 +39,7 @@ body, html {
 body {
   background-repeat: no-repeat;
   background-attachment: fixed;
-  @include make-gradient($dark-blue-700, $blue-500);
+  @include make-gradient($gray-900, lighten($gray-900, 10%));
 }
 
 //
@@ -67,7 +67,8 @@ a.btn-flat {
 //
 .modal {
   &.bottom-sheet {
-    max-height: 90% !important;
+    height: 100%;
+    max-height: 100% !important;
   }
   .modal-close {
     float: right;
@@ -216,12 +217,15 @@ div.toast {
 //
 div.center-block {
   width: 100%;
-  height: 90%;
+  height: 100%;
   margin: 0 auto;
-  padding: 2em 5em;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  &.center {
+    justify-content: center;
+  }
   hr {
     width: 100%;
     opacity: 0.1;
@@ -303,6 +307,7 @@ div.simple-calendar {
       tr {
         // classes => [day, wday-N, past, prev-month, current-month, next-month, today, future, start-date]
         td {
+          font-weight: bold;
           &.prev-month, &.next-month {
             background-color: rgba($gray-900, 0.05);
           }
@@ -316,6 +321,7 @@ div.simple-calendar {
               display: flex;
               margin-bottom: 0.25em;
               a {
+                width: 100%;
                 &.class {
                   @include bg($turqoise-500);
                 }
@@ -341,7 +347,20 @@ div.simple-calendar {
                 &.event {
                   @include bg($green-500);
                 }
-                width: 100%;
+                &::after {
+                  content: '\f105';
+                  font-family: $font-awesome;
+                  margin-right: 2em;
+                  opacity: 0;
+                  transition: opacity 0.2s, margin 0.2s;
+                  float: right;
+                }
+                &:hover {
+                  &::after {
+                    opacity: 1.0;
+                    margin-right: 0.5em;
+                  }
+                }
                 height: 100%;
                 color: $gray-100;
                 transition: background 0.2s ease;

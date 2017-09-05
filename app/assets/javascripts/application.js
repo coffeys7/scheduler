@@ -10,8 +10,9 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require turbolinks
 //= require jquery
+//= require jquery_ujs
+//= require turbolinks
 //= require materialize-sprockets
 //= require_tree .
 
@@ -31,7 +32,11 @@ function prepareComponents() {
     //
     // Modals
     //
-    $('.modal').modal();
+    $('.modal').modal({
+        complete: function() {
+            console.log('Modal closed');
+        }
+    });
 
     //
     // Collapsibles
