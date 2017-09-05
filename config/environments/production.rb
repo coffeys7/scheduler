@@ -11,6 +11,7 @@ Rails.application.configure do
   config.eager_load = true
 
   config.beginning_of_week = :sunday
+  config.time_zone = 'Eastern Time (US & Canada)'
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
