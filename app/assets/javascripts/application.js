@@ -27,13 +27,7 @@
 //
 var HTMLHelper = new HtmlHelper();
 
-
-
-/**
- * Document on [turbolinks:load]
- */
-$(document).on('turbolinks:load', function() {
-
+function prepareComponents() {
     //
     // Modals
     //
@@ -90,5 +84,13 @@ $(document).on('turbolinks:load', function() {
     // Select fields
     //
     $('select').material_select();
+}
 
+/**
+ * Document on [turbolinks:load]
+ */
+$(document).on('turbolinks:load', function() {
+    prepareComponents();
+}).ready(function() {
+    prepareComponents();
 });
