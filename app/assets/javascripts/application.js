@@ -90,6 +90,11 @@ function prepareComponents() {
     // Select fields
     //
     $('select').material_select();
+
+    //
+    // Create new calendar
+    //
+    new Calendar('.simple-calendar');
 }
 
 /**

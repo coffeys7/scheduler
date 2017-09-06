@@ -335,6 +335,11 @@ div.simple-calendar {
           &.today {
             background-color: rgba($yellow-700, 0.1);
           }
+          &.day {
+            &.drag-over {
+              background-color: rgba($blue-500, 0.25);
+            }
+          }
           ul.activities {
             margin: 0;
             padding: 0;
