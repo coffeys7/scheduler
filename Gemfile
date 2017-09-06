@@ -38,6 +38,9 @@ gem 'figaro'
 # jQuery/jQueryUI (JavaScript DOM Framework)
 gem 'jquery-rails'
 
+# jQuery UI
+gem 'jquery-ui-rails'
+
 # Font Awesome (Icons)
 gem 'font-awesome-sass', '~> 4.7.0'
 
