@@ -28,9 +28,9 @@
               <% else %>
                 <% block.call day, sorted_events.fetch(day, []) %>
               <% end %>
-              <ul class="activities">
+              <ul class="activities" date-attr="<%= day %>">
                 <% current_user.activities_for_day(day).each do |activity| %>
-                  <li class="activity">
+                  <li class="activity" id-attr="<%= activity.id %>">
                     <% time_range = (activity.start_time && activity.end_time) ? ("(#{ activity.start_time.strftime("%-I:%M%p") } - #{ activity.end_time.strftime("%-I:%M%p") })") : false %>
                     <a href="<%= "/activities/#{ activity.id }" %>" class="<%= activity.activity_type %> <%= 'completed' if activity.complete? %>"><%= activity.title %>
                       <% if time_range %>

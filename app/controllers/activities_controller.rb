@@ -27,6 +27,15 @@ class ActivitiesController < ApplicationController
     redirect_to root_path
   end
 
+  def replace
+    move_id = params[:move_id]
+    date_to_replace_with = Time.parse(params[:move]) rescue false
+    if date_to_replace_with
+      @updating = Activity.find(move_id)
+      @updating.update_attribute(:date, date_to_replace_with)
+    end
+  end
+
   private
 
   def activity_params

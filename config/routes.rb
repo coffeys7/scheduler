@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   post    '/activities/create'        => 'activities#create'
   post    '/activities/update/:id'    => 'activities#update'
   get     '/activities/destroy/:id'   => 'activities#destroy'
+  get     '/replace_activities'       => 'activities#replace'
 
   #
   # Users

@@ -218,7 +218,6 @@ div.toast {
 div.loader {
   width: 100%;
   height: 100%;
-  background-color: $gray-100;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -287,7 +286,7 @@ div.simple-calendar {
   overflow: auto;
   width: 100%;
   height: 100%;
-  background-color: $gray-100;
+  background-color: lighten($gray-900, 10%);
   filter: drop-shadow(7px 7px 5px rgba($gray-900, 0.75));
   border: 1px solid $gray-900;
   div.calendar-heading {
@@ -298,12 +297,13 @@ div.simple-calendar {
     justify-content: center;
     a {
       margin: 0 2em;
+      color: $gray-100;
       &.calendar-toggle {
         padding: 0 1rem;
       }
     }
     span.calendar-title {
-      color: $gray-900;
+      color: $gray-100;
       font-size: 1.25em;
       font-weight: bold;
       -webkit-font-smoothing: antialiased;
@@ -318,6 +318,7 @@ div.simple-calendar {
         th {
           color: $gray-100;
           font-size: 0.8em;
+          border: 2px solid lighten($gray-900, 30%) !important;
         }
       }
     }
@@ -329,11 +330,13 @@ div.simple-calendar {
           font-weight: bold;
           min-width: 150px !important;
           height: 150px !important;
+          border: 1px solid lighten($gray-900, 30%) !important;
+          color: $gray-100;
           &.prev-month, &.next-month {
             background-color: rgba($gray-900, 0.05);
           }
           &.today {
-            background-color: rgba($yellow-700, 0.1);
+            background-color: rgba($gray-100, 0.25);
           }
           &.day {
             &.drag-over {
@@ -341,17 +344,21 @@ div.simple-calendar {
             }
           }
           ul.activities {
-            margin: 0;
+            margin: 0.5em 0;
             padding: 0;
             li.activity {
               display: flex;
               margin-bottom: 0.25em;
+              &.ui-draggable-dragging {
+                width: 50%;
+                opacity: 0.7;
+              }
               a {
                 width: 100%;
                 height: 100%;
                 color: $gray-100;
                 transition: background 0.2s ease;
-                border: 1px solid lighten($gray-900, 10%);
+                border: 1px solid lighten($gray-500, 10%);
                 padding: 0.25em 0.5em;
                 &::after {
                   font-family: $font-awesome;
@@ -361,7 +368,7 @@ div.simple-calendar {
                   font-size: 0.9em;
                 }
                 &.class {
-                  @include bg($turqoise-500);
+                  @include bg($turqoise-500, 0.7);
                   &::after {
                     content: '\f19d';
                     opacity: 1.0;
@@ -369,7 +376,7 @@ div.simple-calendar {
                   }
                 }
                 &.work {
-                  @include bg($blue-500);
+                  @include bg($blue-500, 0.7);
                   &::after {
                     content: '\f108';
                     opacity: 1.0;
@@ -377,7 +384,7 @@ div.simple-calendar {
                   }
                 }
                 &.assignment {
-                  @include bg($yellow-500);
+                  @include bg($yellow-500, 0.7);
                   color: $gray-900 !important;
                   &::after {
                     content: '\f02e';
@@ -395,7 +402,7 @@ div.simple-calendar {
                   }
                 }
                 &.holiday {
-                  @include bg($orange-500);
+                  @include bg($orange-500, 0.7);
                   &::after {
                     content: '\f06b';
                     opacity: 1.0;
@@ -403,16 +410,16 @@ div.simple-calendar {
                   }
                 }
                 &.exam {
-                  @include bg($red-700);
+                  @include bg($red-700, 0.7);
                 }
                 &.quiz {
-                  @include bg($red-500);
+                  @include bg($red-500, 0.7);
                 }
                 &.generic {
-                  @include bg($gray-700);
+                  @include bg($gray-700, 0.7);
                 }
                 &.event {
-                  @include bg($green-500);
+                  @include bg($green-500, 0.7);
                 }
                 .time-range {
                   font-size: 0.9em;

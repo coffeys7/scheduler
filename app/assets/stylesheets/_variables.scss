@@ -161,10 +161,11 @@ $unicode-times-circle: '\f057';
   }
 }
 
-@mixin bg($color) {
-  background-color: $color;
+@mixin bg($color, $alpha: 1.0) {
+  $bg-color: rgba($color, $alpha);
+  background-color: $bg-color;
   &:hover {
-    background-color: lighten($color, 5%);
+    background-color: lighten($bg-color, 5%);
   }
 }
 
