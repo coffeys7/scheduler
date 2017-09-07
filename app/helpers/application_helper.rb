@@ -6,7 +6,8 @@ module ApplicationHelper
     {
         :javascripts => {
             :tether       => '//npmcdn.com/tether@1.2.4/dist/js/tether.min.js',
-            :numeral      => '//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js'
+            :numeral      => '//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js',
+            :bootstrap    => '//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js'
         },
         :stylesheets => {
             :material_icons => '//fonts.googleapis.com/icon?family=Material+Icons'

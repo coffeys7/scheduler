@@ -8,6 +8,7 @@ function Calendar(sel) {
     this.element = $(sel);
     this.tableCells = function() { return $(sel + ' td.day'); };
     this.activities = function() { return $(sel + ' li.activity'); };
+    this.activityFormHtml = function() { return $('#activity-form-cache').html() };
     this.initialize();
 }
 
@@ -91,7 +92,6 @@ Calendar.prototype.setupDroppables = function() {
                     .css('width', '100%'));
             that.replace($('.--replacing'), $('.--moving'));
             that.setupDraggables();
-
         },
         over: function(event, ui) {
             // triggered when an accepted draggable is over this
@@ -109,4 +109,11 @@ Calendar.prototype.setupHandlers = function() {
     var that = this;
     that.setupDraggables();
     that.setupDroppables();
+
+    //
+    // Activity popover initialization
+    //
+    // that.activities().click(function() {
+    //     $('#activity-dialog').html($(this).html()).dialog();
+    // });
 };

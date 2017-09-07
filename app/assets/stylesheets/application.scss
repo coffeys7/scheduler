@@ -349,6 +349,7 @@ div.simple-calendar {
             li.activity {
               display: flex;
               margin-bottom: 0.25em;
+              filter: drop-shadow(2px 2px 1px rgba($gray-900, 0.75));
               &.ui-draggable-dragging {
                 width: 50%;
                 opacity: 0.7;

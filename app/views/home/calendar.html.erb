@@ -11,6 +11,8 @@
   </div>
 </div>
 
+<div id="activity-dialog"></div>
+
 <!-- Edit Activity Modal -->
 <div id="edit-activity-modal" class="modal bottom-sheet">
   <div class="modal-content">
@@ -19,8 +21,12 @@
   </div>
 </div>
 
+<div id="activity-form-cache" hidden>
+  <%= render 'forms/activity_form' %>
+</div>
+
 <div class="fixed-action-btn">
-  <a class="btn-floating btn-large modal-trigger red" href="#new-activity-modal">
+  <a class="btn-floating btn-large red" id="new-activity-btn">
     <i class="material-icons">add</i>
   </a>
 </div>

@@ -30,6 +30,7 @@
 var HTMLHelper = new HtmlHelper();
 
 function prepareComponents() {
+
     //
     // Modals
     //
@@ -37,6 +38,10 @@ function prepareComponents() {
         complete: function() {
             console.log('Modal closed');
         }
+    });
+
+    $('#new-activity-btn').click(function() {
+       $('#new-activity-modal').modal('open');
     });
 
     //
@@ -102,9 +107,5 @@ function prepareComponents() {
  */
 $(document).on('turbolinks:load', function() {
     console.log("Turbolinks loaded");
-    prepareComponents();
-}).on('page:change', function() {
-    prepareComponents();
-}).ready(function() {
     prepareComponents();
 });
