@@ -361,6 +361,13 @@ div.simple-calendar {
                 transition: background 0.2s ease;
                 border: 1px solid lighten($gray-500, 10%);
                 padding: 0.25em 0.5em;
+                &.elapsed {
+                  opacity: 0.6;
+                }
+                &.completed {
+                  text-decoration: line-through;
+                  opacity: 0.6;
+                }
                 &::after {
                   font-family: $font-awesome;
                   float: right;
@@ -393,8 +400,6 @@ div.simple-calendar {
                     color: $gray-900;
                   }
                   &.completed {
-                    text-decoration: line-through;
-                    opacity: 0.6;
                     &::after {
                       content: '\f00c';
                       opacity: 1.0;

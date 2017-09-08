@@ -100,6 +100,13 @@ function prepareComponents() {
     // Create new calendar
     //
     new Calendar('.simple-calendar');
+
+    //
+    // Calendar toggle
+    //
+    $('.calendar-toggle').click(function() {
+        $('.calendar-heading').html('<div class="loader"><i class="fa fa-circle-o-notch"></i></div>');
+    });
 }
 
 /**

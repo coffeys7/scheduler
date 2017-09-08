@@ -1,0 +1,12 @@
+<ul class="activities" date-attr="<%= day %>">
+  <% current_user.activities_for_day(day).each do |activity| %>
+      <li class="activity" id-attr="<%= activity.id %>">
+        <% classes = "#{ activity.activity_type } #{ 'complete' if activity.complete? } #{ 'elapsed' if activity.elapsed? }" %>
+        <a href="<%= activity.edit_link %>" class="<%= classes %>"><%= activity.title %>
+          <% if activity.time_range_str %>
+              <br><span class="time-range"><%= activity.time_range_str %></span>
+          <% end %>
+        </a>
+      </li>
+  <% end %>
+</ul>

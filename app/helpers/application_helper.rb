@@ -20,4 +20,9 @@ module ApplicationHelper
     image_path("calendar-#{ day }.png")
   end
 
+  # Render the activities partial for the given day
+  def render_activities(day)
+    render :partial => 'activities/activity_list', :locals => { :day => day }
+  end
+
 end

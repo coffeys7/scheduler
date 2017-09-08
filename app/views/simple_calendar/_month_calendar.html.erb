@@ -28,18 +28,7 @@
               <% else %>
                 <% block.call day, sorted_events.fetch(day, []) %>
               <% end %>
-              <ul class="activities" date-attr="<%= day %>">
-                <% current_user.activities_for_day(day).each do |activity| %>
-                  <li class="activity" id-attr="<%= activity.id %>">
-                    <% time_range = (activity.start_time && activity.end_time) ? ("(#{ activity.start_time.strftime("%-I:%M%p") } - #{ activity.end_time.strftime("%-I:%M%p") })") : false %>
-                    <a href="<%= "/activities/#{ activity.id }" %>" class="<%= activity.activity_type %> <%= 'completed' if activity.complete? %>"><%= activity.title %>
-                      <% if time_range %>
-                          <br><span class="time-range"><%= time_range %></span>
-                      <% end %>
-                    </a>
-                  </li>
-                <% end %>
-              </ul>
+              <%= render_activities(day) %>
             <% end %>
           <% end %>
         </tr>
@@ -47,14 +36,3 @@
     </tbody>
   </table>
 </div>
-
-<script>
-  $(document).on('turbolinks:load', function() {
-    //
-    // Calendar toggle
-    //
-    $('.calendar-toggle').click(function() {
-      $('.calendar-heading').html('<div class="loader"><i class="fa fa-circle-o-notch"></i></div>');
-    });
-  });
-</script>
