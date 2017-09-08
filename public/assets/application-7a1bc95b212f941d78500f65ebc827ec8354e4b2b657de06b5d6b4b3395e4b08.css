@@ -14303,12 +14303,11 @@ div.toast.generic {
 div.loader {
   width: 100%;
   height: 100%;
-  background-color: #ecf0f1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-/* line 226, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 225, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.loader i {
   animation: rotate;
   animation-duration: 1.5s;
@@ -14320,7 +14319,7 @@ div.loader i {
   color: #3498db;
 }
 
-/* line 236, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 235, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.center-block {
   width: 100%;
   height: 100%;
@@ -14330,61 +14329,61 @@ div.center-block {
   flex-direction: column;
   align-items: center;
 }
-/* line 244, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 243, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.center-block.center {
   justify-content: center;
 }
-/* line 247, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 246, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.center-block hr {
   width: 100%;
   opacity: 0.1;
   margin: 1em;
 }
-/* line 252, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 251, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.center-block p.title {
   color: #ecf0f1;
   font-weight: bold;
   font-size: 1.5em;
   text-align: center;
 }
-/* line 258, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 257, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.center-block .btn, div.center-block .btn-large {
   font-size: 0.8em;
 }
-/* line 261, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 260, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.center-block .btn-flat {
   font-size: 0.9em;
 }
 
-/* line 269, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 268, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 form.signin_form, form.signup_form, form.password_reset {
   width: 100%;
 }
-/* line 271, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 270, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 form.signin_form label, form.signin_form em, form.signup_form label, form.signup_form em, form.password_reset label, form.password_reset em {
   color: #ecf0f1;
   font-size: 1.1em;
 }
-/* line 275, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 274, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 form.signin_form input, form.signup_form input, form.password_reset input {
   text-align: center;
 }
-/* line 278, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 277, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 form.signin_form input[type="text"], form.signin_form input[type="password"], form.signin_form input[type="email"], form.signup_form input[type="text"], form.signup_form input[type="password"], form.signup_form input[type="email"], form.password_reset input[type="text"], form.password_reset input[type="password"], form.password_reset input[type="email"] {
   background-color: rgba(47, 47, 47, 0.5);
   color: #ecf0f1;
 }
 
-/* line 287, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 286, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar {
   overflow: auto;
   width: 100%;
   height: 100%;
-  background-color: #ecf0f1;
+  background-color: #484848;
   filter: drop-shadow(7px 7px 5px rgba(47, 47, 47, 0.75));
   border: 1px solid #2f2f2f;
 }
-/* line 294, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 293, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar div.calendar-heading {
   height: 7%;
   display: flex;
@@ -14392,9 +14391,10 @@ div.simple-calendar div.calendar-heading {
   align-items: center;
   justify-content: center;
 }
-/* line 300, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 299, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar div.calendar-heading a {
   margin: 0 2em;
+  color: #ecf0f1;
 }
 /* line 302, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar div.calendar-heading a.calendar-toggle {
@@ -14402,7 +14402,7 @@ div.simple-calendar div.calendar-heading a.calendar-toggle {
 }
 /* line 306, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar div.calendar-heading span.calendar-title {
-  color: #2f2f2f;
+  color: #ecf0f1;
   font-size: 1.25em;
   font-weight: bold;
   -webkit-font-smoothing: antialiased;
@@ -14420,50 +14420,68 @@ div.simple-calendar table thead tr {
 div.simple-calendar table thead tr th {
   color: #ecf0f1;
   font-size: 0.8em;
+  border: 2px solid #7b7b7b !important;
 }
-/* line 326, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 327, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr {
   min-height: 150px !important;
 }
-/* line 328, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 329, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td {
   font-size: 0.8em;
   font-weight: bold;
   min-width: 150px !important;
   height: 150px !important;
+  border: 1px solid #7b7b7b !important;
+  color: #ecf0f1;
 }
-/* line 333, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 336, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td.prev-month, div.simple-calendar table tbody tr td.next-month {
   background-color: rgba(47, 47, 47, 0.05);
 }
-/* line 336, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 339, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td.today {
-  background-color: rgba(243, 156, 18, 0.1);
+  background-color: rgba(236, 240, 241, 0.25);
 }
-/* line 340, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 343, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td.day.drag-over {
   background-color: rgba(52, 152, 219, 0.25);
 }
-/* line 344, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 347, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities {
-  margin: 0;
+  margin: 0.5em 0;
   padding: 0;
 }
-/* line 347, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 350, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity {
   display: flex;
   margin-bottom: 0.25em;
+  filter: drop-shadow(2px 2px 1px rgba(47, 47, 47, 0.75));
 }
-/* line 350, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 354, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+div.simple-calendar table tbody tr td ul.activities li.activity.ui-draggable-dragging {
+  width: 50%;
+  opacity: 0.7;
+}
+/* line 358, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a {
   width: 100%;
   height: 100%;
   color: #ecf0f1;
   transition: background 0.2s ease;
-  border: 1px solid #484848;
+  border: 1px solid #b1bdbd;
   padding: 0.25em 0.5em;
 }
-/* line 357, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 365, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+div.simple-calendar table tbody tr td ul.activities li.activity a.elapsed {
+  opacity: 0.6;
+}
+/* line 368, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+div.simple-calendar table tbody tr td ul.activities li.activity a.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+/* line 372, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a::after {
   font-family: "FontAwesome";
   float: right;
@@ -14471,107 +14489,102 @@ div.simple-calendar table tbody tr td ul.activities li.activity a::after {
   margin-left: 0.5em;
   font-size: 0.9em;
 }
-/* line 364, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 379, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.class {
-  background-color: #1abc9c;
+  background-color: rgba(26, 188, 156, 0.7);
 }
-/* line 166, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/_variables.scss */
+/* line 167, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/_variables.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.class:hover {
-  background-color: #1dd2af;
+  background-color: rgba(29, 210, 175, 0.7);
 }
-/* line 366, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 381, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.class::after {
   content: '\f19d';
   opacity: 1.0;
   color: #ecf0f1;
 }
-/* line 372, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 387, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.work {
-  background-color: #3498db;
+  background-color: rgba(52, 152, 219, 0.7);
 }
-/* line 166, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/_variables.scss */
+/* line 167, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/_variables.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.work:hover {
-  background-color: #4aa3df;
+  background-color: rgba(74, 163, 223, 0.7);
 }
-/* line 374, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 389, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.work::after {
   content: '\f108';
   opacity: 1.0;
   color: #ecf0f1;
 }
-/* line 380, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 395, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.assignment {
-  background-color: #f1c40f;
+  background-color: rgba(241, 196, 15, 0.7);
   color: #2f2f2f !important;
 }
-/* line 166, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/_variables.scss */
+/* line 167, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/_variables.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.assignment:hover {
-  background-color: #f2ca27;
+  background-color: rgba(242, 202, 39, 0.7);
 }
-/* line 383, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 398, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.assignment::after {
   content: '\f02e';
   opacity: 1.0;
   color: #2f2f2f;
 }
-/* line 388, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
-div.simple-calendar table tbody tr td ul.activities li.activity a.assignment.completed {
-  text-decoration: line-through;
-  opacity: 0.6;
-}
-/* line 391, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 404, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.assignment.completed::after {
   content: '\f00c';
   opacity: 1.0;
   color: #2f2f2f;
 }
-/* line 398, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 411, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.holiday {
-  background-color: #e67e22;
+  background-color: rgba(230, 126, 34, 0.7);
 }
-/* line 166, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/_variables.scss */
+/* line 167, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/_variables.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.holiday:hover {
-  background-color: #e98b39;
+  background-color: rgba(233, 139, 57, 0.7);
 }
-/* line 400, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 413, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.holiday::after {
   content: '\f06b';
   opacity: 1.0;
   color: #ecf0f1;
 }
-/* line 406, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 419, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.exam {
-  background-color: #c0392b;
+  background-color: rgba(192, 57, 43, 0.7);
 }
-/* line 166, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/_variables.scss */
+/* line 167, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/_variables.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.exam:hover {
-  background-color: #d14233;
+  background-color: rgba(209, 66, 51, 0.7);
 }
-/* line 409, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 422, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.quiz {
-  background-color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.7);
 }
-/* line 166, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/_variables.scss */
+/* line 167, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/_variables.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.quiz:hover {
-  background-color: #ea6153;
+  background-color: rgba(234, 97, 83, 0.7);
 }
-/* line 412, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 425, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.generic {
-  background-color: #7f8c8d;
+  background-color: rgba(127, 140, 141, 0.7);
 }
-/* line 166, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/_variables.scss */
+/* line 167, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/_variables.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.generic:hover {
-  background-color: #8c9899;
+  background-color: rgba(140, 152, 153, 0.7);
 }
-/* line 415, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 428, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.event {
-  background-color: #2ecc71;
+  background-color: rgba(46, 204, 113, 0.7);
 }
-/* line 166, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/_variables.scss */
+/* line 167, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/_variables.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a.event:hover {
-  background-color: #40d47e;
+  background-color: rgba(64, 212, 126, 0.7);
 }
-/* line 418, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
+/* line 431, /Users/samcoffey/Documents/Development/projects/Web/Rails/personal/scheduler/app/assets/stylesheets/application.scss */
 div.simple-calendar table tbody tr td ul.activities li.activity a .time-range {
   font-size: 0.9em;
   font-weight: lighter;
