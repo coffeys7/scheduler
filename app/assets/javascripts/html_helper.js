@@ -86,12 +86,14 @@ HtmlHelper.prototype.toast = function(opts) {
 HtmlHelper.prototype.element = function(element, opts) {
     var that = this;
     var nonClosingTagElements = ['img', 'input'];
+    var html = (opts && opts.html) ? opts.html : '';
+    if (html.constructor === Array) { html = html.join(''); }
     var text = (opts && opts.text) ? opts.text.toString() : '';
     var attrs = (opts && opts.attributes) ? opts.attributes : false;
     var elem = '<' + element;
     elem += ( ((attrs) ? (' ' + that.makeAttributes(attrs)) : '') + '>' );
     if (!nonClosingTagElements.contains(element)) {
-        elem += (text + '<' + element + '>');
+        elem += ((text || html) + '<' + element + '>');
     }
     return elem;
 };
