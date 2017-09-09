@@ -41979,6 +41979,7 @@ function Calendar(sel) {
     this.element = $(sel);
     this.tableCells = function() { return $(sel + ' td.day'); };
     this.activities = function() { return $(sel + ' li.activity'); };
+    this.activityFormHtml = function() { return $('#activity-form-cache').html() };
     this.initialize();
 }
 
@@ -42062,7 +42063,6 @@ Calendar.prototype.setupDroppables = function() {
                     .css('width', '100%'));
             that.replace($('.--replacing'), $('.--moving'));
             that.setupDraggables();
-
         },
         over: function(event, ui) {
             // triggered when an accepted draggable is over this
@@ -42080,6 +42080,13 @@ Calendar.prototype.setupHandlers = function() {
     var that = this;
     that.setupDraggables();
     that.setupDroppables();
+
+    //
+    // Activity popover initialization
+    //
+    // that.activities().click(function() {
+    //     $('#activity-dialog').html($(this).html()).dialog();
+    // });
 };
 ////////////////////////////////////////////////////////////////////////////////
 //
@@ -42225,12 +42232,14 @@ HtmlHelper.prototype.toast = function(opts) {
 HtmlHelper.prototype.element = function(element, opts) {
     var that = this;
     var nonClosingTagElements = ['img', 'input'];
+    var html = (opts && opts.html) ? opts.html : '';
+    if (html.constructor === Array) { html = html.join(''); }
     var text = (opts && opts.text) ? opts.text.toString() : '';
     var attrs = (opts && opts.attributes) ? opts.attributes : false;
     var elem = '<' + element;
     elem += ( ((attrs) ? (' ' + that.makeAttributes(attrs)) : '') + '>' );
     if (!nonClosingTagElements.contains(element)) {
-        elem += (text + '<' + element + '>');
+        elem += ((text || html) + '<' + element + '>');
     }
     return elem;
 };
@@ -42340,6 +42349,7 @@ String.prototype.contains = function(s) {
 var HTMLHelper = new HtmlHelper();
 
 function prepareComponents() {
+
     //
     // Modals
     //
@@ -42347,6 +42357,10 @@ function prepareComponents() {
         complete: function() {
             console.log('Modal closed');
         }
+    });
+
+    $('#new-activity-btn').click(function() {
+       $('#new-activity-modal').modal('open');
     });
 
     //
@@ -42405,6 +42419,13 @@ function prepareComponents() {
     // Create new calendar
     //
     new Calendar('.simple-calendar');
+
+    //
+    // Calendar toggle
+    //
+    $('.calendar-toggle').click(function() {
+        $('.calendar-heading').html('<div class="loader"><i class="fa fa-circle-o-notch"></i></div>');
+    });
 }
 
 /**
@@ -42412,9 +42433,5 @@ function prepareComponents() {
  */
 $(document).on('turbolinks:load', function() {
     console.log("Turbolinks loaded");
-    prepareComponents();
-}).on('page:change', function() {
-    prepareComponents();
-}).ready(function() {
     prepareComponents();
 });
